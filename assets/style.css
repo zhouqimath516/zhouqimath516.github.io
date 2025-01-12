@@ -55,8 +55,8 @@ body {
 }
 .section h2 {
     font-size: 1.8em;
-    color: #1A237E; /* 深蓝色标题 */
-    border-bottom: 2px solid #1A237E; /* 深蓝色底线 */
+    color: #1565c0; /* 蓝色标题 */
+    border-bottom: 2px solid #1565c0; /* 蓝色底线 */
     padding-bottom: 5px;
 }
 .section ul {
@@ -67,7 +67,7 @@ body {
     margin: 10px 0;
 }
 .section ul li a {
-    color: #1565c0; /* 中蓝色链接 */
+    color: #1A237E; /* 深蓝色链接 */
     text-decoration: none;
 }
 .section ul li a:hover {
@@ -88,5 +88,5 @@ body {
     text-decoration: underline;
 }
 .footer a:hover {
-    color: #e3f2fd;
+    color: #e3f2fd; /* 更浅蓝色 hover 效果 */
 }
