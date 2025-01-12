@@ -10,8 +10,8 @@ body {
 
 /* Header */
 .header {
-    background-color: #005f73;
-    color: white;
+    background-color: #90caf9; /* 淡蓝色 */
+    color: #ffffff;
     text-align: center;
     padding: 30px 20px;
 }
@@ -19,8 +19,9 @@ body {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    border: 3px solid #fff;
+    border: 3px solid #ffffff;
     margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 .header h1 {
     font-size: 2em;
@@ -31,11 +32,11 @@ body {
     margin: 5px 0;
 }
 .header a {
-    color: #80deea;
+    color: #e3f2fd; /* 更浅的蓝色 */
     text-decoration: none;
 }
 .header a:hover {
-    color: #b2ebf2;
+    color: #bbdefb; /* 浅蓝色 hover 效果 */
     text-decoration: underline;
 }
 
@@ -50,7 +51,7 @@ body {
 }
 .section h2 {
     font-size: 1.5em;
-    color: #005f73;
+    color: #42a5f5; /* 蓝色标题 */
     border-bottom: 2px solid #ddd;
     margin-bottom: 10px;
 }
@@ -62,25 +63,26 @@ body {
     margin: 10px 0;
 }
 .section ul li a {
-    color: #00796b;
+    color: #1976d2; /* 深蓝色链接 */
     text-decoration: none;
 }
 .section ul li a:hover {
     text-decoration: underline;
+    color: #1565c0; /* 更深蓝色 hover 效果 */
 }
 
 /* Footer */
 .footer {
     text-align: center;
-    background-color: #005f73;
+    background-color: #90caf9; /* 与 header 一致的淡蓝色 */
     color: white;
     padding: 10px 0;
     font-size: 0.9em;
 }
 .footer a {
-    color: #fff;
+    color: #e3f2fd;
     text-decoration: underline;
 }
 .footer a:hover {
-    color: #b2ebf2;
+    color: #bbdefb;
 }
