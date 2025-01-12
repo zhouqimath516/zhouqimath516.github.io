@@ -1,89 +1,48 @@
-/* General Styles */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    color: #e0e0e0;
-    background-color: #121212; /* 深灰色背景，适合深色主题 */
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Academic Homepage</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <img src="assets/profile.jpg" alt="Your Photo" class="profile-pic">
+            <h1>Your Name</h1>
+            <p>Email: <a href="mailto:your_email@example.com">your_email@example.com</a></p>
+            <p>School: Your University</p>
+            <p>Advisor: Prof. Advisor's Name</p>
+            <p>Research Interests: Mathematics, Inequalities, Plurisubharmonic Functions</p>
+        </div>
+    </header>
 
-/* Header */
-.header {
-    background-color: #0a1f44; /* 深蓝色背景 */
-    color: #ffffff;
-    text-align: center;
-    padding: 30px 20px;
-}
-.header .profile-pic {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    border: 3px solid #ffffff;
-    margin-bottom: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-.header h1 {
-    font-size: 2em;
-    margin: 0;
-}
-.header p {
-    font-size: 1em;
-    margin: 5px 0;
-}
-.header a {
-    color: #1e88e5; /* 深蓝色链接 */
-    text-decoration: none;
-}
-.header a:hover {
-    color: #1565c0; /* 更深蓝色 hover 效果 */
-    text-decoration: underline;
-}
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Publications Section -->
+        <section id="publications" class="section">
+            <h2>Publications</h2>
+            <ul>
+                <li><a href="publications/paper1.pdf" target="_blank">Paper Title 1</a></li>
+                <li><a href="publications/paper2.pdf" target="_blank">Paper Title 2</a></li>
+            </ul>
+        </section>
 
-/* Main Content */
-.container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 0 20px;
-    color: #e0e0e0; /* 提高正文的对比度 */
-}
-.section {
-    margin-bottom: 30px;
-}
-.section h2 {
-    font-size: 1.5em;
-    color: #2196f3; /* 中深蓝色标题 */
-    border-bottom: 2px solid #333;
-    margin-bottom: 10px;
-}
-.section ul {
-    list-style: none;
-    padding: 0;
-}
-.section ul li {
-    margin: 10px 0;
-}
-.section ul li a {
-    color: #1565c0; /* 深蓝色链接 */
-    text-decoration: none;
-}
-.section ul li a:hover {
-    text-decoration: underline;
-    color: #0d47a1; /* 更深蓝色 hover 效果 */
-}
+        <!-- Notes Section -->
+        <section id="notes" class="section">
+            <h2>Notes</h2>
+            <ul>
+                <li><a href="notes/note1.html" target="_blank">Note on Topic 1</a></li>
+                <li><a href="notes/note2.html" target="_blank">Note on Topic 2</a></li>
+            </ul>
+        </section>
+    </main>
 
-/* Footer */
-.footer {
-    text-align: center;
-    background-color: #0a1f44; /* 与 header 一致的深蓝色 */
-    color: #e0e0e0;
-    padding: 10px 0;
-    font-size: 0.9em;
-}
-.footer a {
-    color: #1e88e5; /* 深蓝色链接 */
-    text-decoration: underline;
-}
-.footer a:hover {
-    color: #1565c0;
-}
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Your Name | Powered by <a href="https://github.com">GitHub Pages</a></p>
+    </footer>
+</body>
+</html>
