@@ -4,14 +4,14 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    color: #e0e0e0;
-    background-color: #121212; /* 深灰色背景 */
+    color: #333;
+    background-color: #f9f9f9;
 }
 
 /* Header */
 .header {
-    background-color: #1A237E; /* 深蓝色背景 */
-    color: #ffffff;
+    background-color: #005f73;
+    color: white;
     text-align: center;
     padding: 30px 20px;
 }
@@ -19,9 +19,8 @@ body {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    border: 3px solid #ffffff;
+    border: 3px solid #fff;
     margin-bottom: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 .header h1 {
     font-size: 2em;
@@ -32,11 +31,11 @@ body {
     margin: 5px 0;
 }
 .header a {
-    color: #1e88e5; /* 深蓝色链接 */
+    color: #80deea;
     text-decoration: none;
 }
 .header a:hover {
-    color: #1565c0; /* 更深蓝色 hover 效果 */
+    color: #b2ebf2;
     text-decoration: underline;
 }
 
@@ -45,15 +44,14 @@ body {
     max-width: 800px;
     margin: 20px auto;
     padding: 0 20px;
-    color: #e0e0e0; /* 提高正文的对比度 */
 }
 .section {
     margin-bottom: 30px;
 }
 .section h2 {
     font-size: 1.5em;
-    color: #2196f3; /* 中深蓝色标题 */
-    border-bottom: 2px solid #333;
+    color: #005f73;
+    border-bottom: 2px solid #ddd;
     margin-bottom: 10px;
 }
 .section ul {
@@ -64,26 +62,25 @@ body {
     margin: 10px 0;
 }
 .section ul li a {
-    color: #1565c0; /* 深蓝色链接 */
+    color: #00796b;
     text-decoration: none;
 }
 .section ul li a:hover {
     text-decoration: underline;
-    color: #0d47a1; /* 更深蓝色 hover 效果 */
 }
 
 /* Footer */
 .footer {
     text-align: center;
-    background-color: #1A237E; /* 深蓝色背景，与 header 一致 */
-    color: #e0e0e0;
+    background-color: #005f73;
+    color: white;
     padding: 10px 0;
     font-size: 0.9em;
 }
 .footer a {
-    color: #1e88e5; /* 深蓝色链接 */
+    color: #fff;
     text-decoration: underline;
 }
 .footer a:hover {
-    color: #1565c0;
+    color: #b2ebf2;
 }
