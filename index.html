@@ -3,145 +3,355 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zhou Qi-Homepage</title>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <title>Qi Zhou-Homepage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #ffffff;
-            color: #000000;
-            text-align: center;
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --light-text: #777;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --card-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
         }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f9f9f9;
+        }
+        
         .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+        }
+        
+        .header-content {
             max-width: 800px;
             margin: 0 auto;
-            padding: 20px;
-            text-align: left;
-            background-color: #ffffff;
         }
+        
         h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            color: #003366;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
         }
-        .info {
-            margin-bottom: 20px;
+        
+        .title {
+            font-size: 1.2rem;
+            font-weight: normal;
+            margin-bottom: 1.5rem;
         }
-        .info p {
-            margin: 5px 0;
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-top: 1rem;
         }
-        a {
-            color: #003366;
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        section {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--card-shadow);
+        }
+        
+        h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--secondary-color);
+            display: inline-block;
+        }
+        
+        h3 {
+            color: var(--dark-color);
+            margin: 1.5rem 0 0.5rem;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .info-item {
+            margin-bottom: 1rem;
+        }
+        
+        .info-label {
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-right: 0.5rem;
+        }
+        
+        .paper {
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .paper:last-child {
+            border-bottom: none;
+        }
+        
+        .paper-title {
+            font-weight: bold;
+            color: var(--dark-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .paper-meta {
+            color: var(--light-text);
+            font-style: italic;
+            margin-bottom: 0.5rem;
+        }
+        
+        .paper-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 0.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .paper-links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            color: var(--secondary-color);
             text-decoration: none;
+            padding: 0.3rem 0.8rem;
+            border: 1px solid var(--secondary-color);
+            border-radius: 4px;
+            transition: all 0.3s ease;
         }
-        a:hover {
+        
+        .paper-links a:hover {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+        
+        .preprint {
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background-color: #f9f9f9;
+            border-left: 4px solid var(--secondary-color);
+            border-radius: 4px;
+        }
+        
+        .preprint-title {
+            font-weight: bold;
+            color: var(--dark-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .preprint-links {
+            margin-top: 0.5rem;
+        }
+        
+        .note-list {
+            list-style-type: none;
+        }
+        
+        .note-item {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .note-item:before {
+            content: "•";
+            color: var(--secondary-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .note-item a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .note-item a:hover {
+            color: var(--accent-color);
             text-decoration: underline;
         }
-        .section {
-            margin-top: 30px;
+        
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+            color: var(--light-text);
+            border-top: 1px solid #eee;
         }
-        .section h2 {
-            font-size: 2em;
-            margin-bottom: 10px;
-            color: #003366;
-        }
-        .section ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        .section ul li {
-            margin-bottom: 10px;
-        }
-        .section ul li::before {
-            content: "\2022"; /* Unicode for a bullet point */
-            color: #003366;
-            font-weight: bold;
-            display: inline-block;
-            width: 1em;
-            margin-left: -1em;
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+            
+            .paper-links {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .paper-links a {
+                width: 100%;
+                justify-content: center;
+            }
         }
     </style>
 </head>
-
-    
 <body>
+    <header>
+        <div class="header-content">
+            <h1>Qi Zhou (周歧)</h1>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span><strong>Email:</strong>  <a href="mailto:zhouqimath20@lzu.edu.cn">zhouqimath20@lzu.edu.cn</a> or <a href="mailto:zhouqimath@163.com">zhouqimath@163.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-university"></i>
+                    <span><strong>Affiliation:</strong> Lanzhou University (Graduate student)</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-user-graduate"></i>
+                    <span><strong>Advisor:</strong> <a href="https://mathteacher.lzu.edu.cn/system/TeacherProfileqt/content2.jsp?id=46">Wei Zhang</a></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
     <div class="container">
-        <h1>Qi Zhou (周歧)</h1>
-        <div class="info">
-            <p><strong>Email:</strong>  <a href="mailto:zhouqimath20@lzu.edu.cn">zhouqimath20@lzu.edu.cn</a> or <a href="mailto:zhouqimath@163.com">zhouqimath@163.com</a></p>
-            <p><strong>Affiliation:</strong> Lanzhou University (Graduate student)</p>
-            <p><strong>Advisor:</strong> <a href="https://mathteacher.lzu.edu.cn/system/TeacherProfileqt/content2.jsp?id=46">Wei Zhang</a></p>
-            <p data-lang="en" style="display: block;">
-             <strong> Research Interests </strong>
-             <ul data-lang="en" style="display: block;">
-             <li>  Fully Nonlinear Elliptic PDEs (Convexity/Regularity of solution to fully nonlinear elliptic PDEs)</li>
-             <li>  Geometric Analysis </li>
-             </ul> </p>
-            <p data-lang="en" style="display: block;">
-             <strong> Education </strong>
-             <ul data-lang="en" style="display: block;">
-             <li>  2020.9 - 2023.6, M.S. in Mathematics, Lanzhou University, China. </li>
-             <li>  2015.9 - 2019.6, B.S. in Mathematics, Yunnan University Dianchi College, China. </li>
-             </ul> </p>
-        </div>
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <h3>Research Interests</h3>
+                    <p>
+                        <li>  Fully Nonlinear Elliptic PDEs (Convexity/Regularity of solution to fully nonlinear elliptic PDEs)</li>
+                        <li>  Geometric Analysis </li>
+                    </p>
+                </div>
+                <div class="info-item">
+                    <h3>Education</h3>
+                    <p><span class="info-label">Ph.D. in Mathematics</span><br>Lanzhou University, 2025.9-Present</p>
+                    <p><span class="info-label">M.S. in Mathematics</span><br>Lanzhou University, 2020.9-2023.6</p>
+                    <p><span class="info-label">B.S. in Mathematics</span><br>Yunnan University Dianchi College, 2015.9-2019.6</p>
+                </div>
+            </div>
+        </section>
 
-        <div class="section">
+        <section id="publications">
             <h2>Publications</h2>
-            <p data-lang="en" style="display: block;">
-            <ul data-lang="en" style="display: block;">
-                <li>
-                    <strong>(With Wei Zhang) Power convexity of solutions to a special Lagrangian equation in dimension two.</strong><br>
-                    <em>J. Geom. Anal. 33 (2023), no. 4, Paper No. 135, 13 pp.</em><br>
-                    <a href="publications/Zhang-Zhou2023.pdf" target="_blank"><strong>PDF</strong></a> <a href="https://link.springer.com/article/10.1007/s12220-022-01186-6"><strong>Journal</strong></a>
-                </li>
-            </ul>
-        </div>
+            
+            <div class="paper">
+                <div class="paper-title">(With Wei Zhang) Power convexity of solutions to a special Lagrangian equation in dimension two.</div>
+                <div class="paper-meta">J. Geom. Anal. 33 (2023), no. 4, Paper No. 135, 13 pp.</div>
+                <div class="paper-links">
+                    <a href="publications/Zhang-Zhou2023.pdf"><i class="fas fa-file-pdf"></i> PDF</a>
+                    <a href="#"><i class="fas fa-external-link-alt"></i> arXiv</a>
+                    <a href="https://link.springer.com/article/10.1007/s12220-022-01186-6"><i class="fas fa-book"></i> Journal</a>
+                </div>
+            </div>
+        </section>
 
-        <div class="section">
+        <section id="preprints">
             <h2>Preprints</h2>
-            <p data-lang="en" style="display: block;">
-            <ul data-lang="en" style="display: block;">
-                <li>
-                    <strong>(With Wei Zhang) Power convexity of solutions to complex Monge-Ampère equation in \(\mathbb{C}^2\).</strong><br>
-                    <em>2025, arXiv:2505.11002, Withdraw.</em><br>
-                    <a href="https://arxiv.org/pdf/2505.11002"><strong>arXiv</strong></a>
-                </li>
-                <li>
-                    <strong>(With Wei Zhang) The log-concavity of eigenfunction to complex Monge-Ampère operator in \(\mathbb{C}^2\).</strong><br>
-                    <em>2025, arXiv:2505.12817, Withdraw.</em><br>
-                    <a href="https://arxiv.org/pdf/2505.12817"><strong>arXiv</strong></a>
-                </li>
-                <li>
-                    <strong>(With Wei Zhang) A Liouville type theorem for 2-Hessian operator on the Heisenberg group.</strong><br>
-                    <em>2025, Preprint.</em><br>
-                </li>
-                <li>
-                    <strong>(With Wei Zhang) The constant rank theorem for complex Lagrangian phase operator.</strong><br>
-                    <em>2025, Preprint.</em><br>
-                </li>
-                <li>
-                    <strong>(With Wei Zhang) On the constant rank theorem for special Lagrangian type operator on \(\mathbb{S}^n\).</strong><br>
-                    <em>2025, Preprint.</em><br>
-                </li>
-            </ul>
-        </div>
-                
+            
+            <div class="preprint">
+                <div class="preprint-title">(With Wei Zhang) Power convexity of solutions to complex Monge-Ampère equation in \(\mathbb{C}^2\).</div>
+                <div class="preprint-links">
+                    <a href="#"><i class="fas fa-file-pdf"></i> PDF</a>
+                    <a href="https://arxiv.org/pdf/2505.11002"><i class="fas fa-external-link-alt"></i> arXiv</a>
+                </div>
+            </div>
+            
+            <div class="preprint">
+                <div class="preprint-title">(With Wei Zhang) The log-concavity of eigenfunction to complex Monge-Ampère operator in \(\mathbb{C}^2\).</div>
+                <div class="preprint-links">
+                    <a href="#"><i class="fas fa-file-pdf"></i> PDF</a>
+                    <a href="https://arxiv.org/pdf/2505.12817"><i class="fas fa-external-link-alt"></i> arXiv</a>
+                </div>
+            </div>
+            
+            <div class="preprint">
+                <div class="preprint-title">(With Wei Zhang) A Liouville type theorem for 2-Hessian operator on the Heisenberg group.</div>
+                <div class="preprint-links">
+                    <a href="#"><i class="fas fa-file-pdf"></i> PDF</a>
+                </div>
+            </div>
 
-        <div class="section">
+            <div class="preprint">
+                <div class="preprint-title">(With Wei Zhang) The constant rank theorem for complex Lagrangian phase operator.</div>
+                <div class="preprint-links">
+                    <a href="#"><i class="fas fa-file-pdf"></i> PDF</a>
+                </div>
+            </div>
+            
+            <div class="preprint">
+                <div class="preprint-title">(With Wei Zhang) On the constant rank theorem for special Lagrangian type operator on \(\mathbb{S}^n\).</div>
+                <div class="preprint-links">
+                    <a href="#"><i class="fas fa-file-pdf"></i> PDF</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="notes">
             <h2>Notes</h2>
-            <ul>
-                <li><a href="notes/Xia2021(Minimal Surface).pdf" target="_blank">Lecture notes on minimal surfaces</a></li>
-                <li><a href="notes/Ma2023(Obata's Technique).pdf" target="_blank">椭圆方程积分恒等式的应用 (in Chinese)</a></li>
-                <li><a href="publications/Zhou_MasterThesis.pdf" target="_blank">Master Thesis (title:二维special Lagrangian方程解的幂凸性) (in Chinese)</a></li>
+            <ul class="note-list">
+                <li class="note-item"><a href="notes/Xia2021(Minimal Surface).pdf">Lecture notes on minimal surfaces</a></li>
+                <li class="note-item"><a href="notes/Ma2023(Obata's Technique).pdf">椭圆方程积分恒等式的应用 (in Chinese)</a></li>
+                <li class="note-item"><a href="publications/Zhou_MasterThesis.pdf">Master Thesis (title:二维special Lagrangian方程解的幂凸性) (in Chinese)</a></li>
             </ul>
-        </div>
+        </section>
     </div>
-    <p>Last updated: 2025.6.6</p>
-        <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2025 Qi Zhou | Powered by <a href="https://github.com">GitHub Pages</a></p>
+    <p>Last updated: 2025.8.24</p>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Qi Zhou | Powered by <a href="https://github.com">GitHub Pages</a></p>
+        </div>
     </footer>
 </body>
 </html>
